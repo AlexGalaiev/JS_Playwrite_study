@@ -1,0 +1,11 @@
+{
+  "name": "js_playwrite_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simple.js",
+  "scripts": {
+    "test": "No TEST"
+  },
+  "author": "",
+  "license": "ISC"
+}
