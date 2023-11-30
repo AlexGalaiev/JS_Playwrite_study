@@ -1,4 +1,4 @@
-let romeNumber = 'II'
+let romeNumber = 'XXXL'
 let arabicRomeCalculator = {
     'I':1,
     'V':5,
@@ -11,8 +11,7 @@ let arabicRomeCalculator = {
 function romeToArabicConverter(romeNumberExample, arabicRomeCalculator){
     let result = 0
     for (let i = 0; i < romeNumberExample.length; i++) {
-        let currentRomeSymbol = romeNumberExample[i]
-        result += arabicRomeCalculator[currentRomeSymbol]
+        result += arabicRomeCalculator[romeNumberExample[i]]
     }
     return result
 }
