@@ -15,15 +15,15 @@ function getRandomNumber() {
   return Math.floor(Math.random() * 100);
 }
 
-function getResult(number, delay, callback) {
+function getResult(number, delay) {
   let promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(callback(number));
+      resolve(checkEvenNumber(number));
     }, delay);
   });
   return promise;
 }
 
-getResult(getRandomNumber(), getRandomDelay(), (getRandomNumber)=>{
-    checkEvenNumber(getRandomNumber)
-}).then((number) => {console.log(number)})
+getResult(getRandomNumber(), getRandomDelay())
+.then(() => {getResult(getRandomNumber(), getRandomDelay())})
+.then(() => {getResult(getRandomNumber(), getRandomDelay())})
